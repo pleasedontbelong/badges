@@ -49,7 +49,9 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'base',
     'userena',
-    'accounts'
+    'accounts',
+    'models3d',
+    'badges',
 ]
 
 MIDDLEWARE = [
