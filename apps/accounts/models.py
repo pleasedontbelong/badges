@@ -9,3 +9,4 @@ class Profile(UserenaBaseProfile):
                                 unique=True,
                                 verbose_name=_('user'),
                                 related_name='profile')
+    nb_views = models.IntegerField(default=0)
