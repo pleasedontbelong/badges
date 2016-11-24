@@ -11,7 +11,7 @@ from mock import patch
 User = get_user_model()
 
 
-class ManagerTests(TestCase):
+class ValidatorTests(TestCase):
 
     def setUp(self):
         user = User.objects.create_user(
