@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'guardian',
     'easy_thumbnails',
+    'rest_framework',
     'base',
     'userena',
     'accounts',
@@ -152,3 +153,9 @@ USERENA_SIGNIN_AFTER_SIGNUP = True
 
 LOGIN_URL = '/accounts/signin/'
 LOGOUT_URL = '/accounts/signout/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
