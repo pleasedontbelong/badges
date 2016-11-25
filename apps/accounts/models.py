@@ -15,6 +15,10 @@ class Profile(UserenaBaseProfile):
 
     objects = ProfilesManager()
 
+    def increment_nb_views(self):
+        self.nb_views += 1
+        self.save(update_fields=('nb_views',))
+
     def has_star_badge(self):
         return self.badges.filter(identifier=BADGES.STAR).exists()
 
