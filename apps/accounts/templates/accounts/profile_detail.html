@@ -1,0 +1,14 @@
+{% extends 'userena/profile_detail.html' %}
+{% load i18n %}
+
+{% block profile_details %}
+  {{ block.super }}
+  <div id="badges">
+    <h1>Badges</h1>
+    <ul class="row">
+      {% for badge in profile.badges.all %}
+        <li class="col-md-4">{{badge}}</li>
+      {% endfor %}
+    </ul>
+  </div> 
+{% endblock %}

@@ -8,7 +8,7 @@ from django.core.exceptions import PermissionDenied
 
 class ProfileDetailView(DetailView):
 
-    template_name = userena_settings.USERENA_PROFILE_DETAIL_TEMPLATE
+    template_name = "accounts/profile_detail.html"
 
     def get_object(self, queryset=None):
         user = get_object_or_404(get_user_model(), username__iexact=self.kwargs['username'])
