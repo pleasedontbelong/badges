@@ -3,8 +3,8 @@ from .views import ProfileDetailView
 
 
 urlpatterns = [
-    url(r'^accounts/(?P<username>(?!(signout|signup|signin)/)[\@\.\w-]+)/$',
+    url(r'^(?P<username>(?!(signout|signup|signin)/)[\@\.\w-]+)/$',
         ProfileDetailView.as_view(),
         name='profile_detail'),
-    url(r'^accounts/', include('userena.urls')),
+    url(r'^', include('userena.urls')),
 ]

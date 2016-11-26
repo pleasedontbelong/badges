@@ -1,8 +1,8 @@
 from django.utils import timezone
-from django.db import models
+from userena.managers import UserenaBaseProfileManager
 from badges.constants import TIMEDELTA_FOR_PIONNEER
 
 
-class ProfilesManager(models.Manager):
+class ProfilesManager(UserenaBaseProfileManager):
     def filter_pionneers(self):
         return self.filter(user__date_joined__lte=timezone.now() - TIMEDELTA_FOR_PIONNEER)

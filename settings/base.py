@@ -146,14 +146,14 @@ SITE_ID = 1
 
 AUTH_PROFILE_MODULE = 'accounts.Profile'
 
-USERENA_SIGNIN_REDIRECT_URL = '/accounts/%(username)s/'
+USERENA_SIGNIN_REDIRECT_URL = '/%(username)s/'
 USERENA_ACTIVATION_REQUIRED = False
 USERENA_MUGSHOT_GRAVATAR = True
 USERENA_SIGNIN_AFTER_SIGNUP = True
 USERENA_DEFAULT_PRIVACY = 'open'
 
-LOGIN_URL = '/accounts/signin/'
-LOGOUT_URL = '/accounts/signout/'
+LOGIN_URL = '/signin/'
+LOGOUT_URL = '/signout/'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
