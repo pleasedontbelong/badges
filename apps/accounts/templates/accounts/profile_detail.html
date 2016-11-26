@@ -1,13 +1,26 @@
 {% extends 'userena/profile_detail.html' %}
 {% load i18n %}
 
+{% block profile_navigation_items %}
+  {{ block.super }}
+  <li><a href="{% url 'model_3d_create' user.username %}">{% trans "Create 3D Model" %}</a></li>
+{% endblock %}
+
 {% block profile_details %}
   {{ block.super }}
   <div id="badges">
-    <h1>Badges</h1>
+    <h2>Badges</h2>
     <ul class="row">
       {% for badge in profile.badges.all %}
         <li class="col-md-4">{{badge}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="models3d">
+    <h2>3D Models</h2>
+    <ul class="row">
+      {% for model3d in profile.model3d_set.all %}
+        <li class="col-md-4">{{model3d}}</li>
       {% endfor %}
     </ul>
   </div> 

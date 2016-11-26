@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/', include('accounts.api.urls')),
     url(r'^', include('accounts.urls')),
+    url(r'^', include('models3d.urls')),
 ]
