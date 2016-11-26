@@ -5,3 +5,4 @@ psycopg2==2.6.2
 django-userena==2.0.1
 django-extended-choices==1.1.1
 celery[redis]
+python-twitter==3.2
