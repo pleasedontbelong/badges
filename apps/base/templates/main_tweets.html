@@ -1,0 +1,11 @@
+{% load pull_tweets %}
+
+{% fetch_tweets as tweets_list %}
+<div class="container">
+  <h2>Recent Tweets</h2>
+  <ul>
+    {% for tweet in tweets_list %}
+      <li>{{ tweet.text }}</li>
+    {% endfor %}
+  </ul>
+</div>

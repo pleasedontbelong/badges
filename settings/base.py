@@ -160,3 +160,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+# Twitter access tokens
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""
+TWITTER_SEARCH_QUERY = "q=from%3Ainterior&src=typd&lang=en&count=5"
